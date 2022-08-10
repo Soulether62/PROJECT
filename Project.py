@@ -32,12 +32,14 @@ def Decode():
    
     def Decoder():
         Message=stg.reveal(FileOpen)
-        label3 = Label(DecScreen,text=Message,fg="green",height=1,font=("times new roman",40,"bold"))
-        label3.place(relx=0.43,rely=0.2)     
+        label3 = Label(DecScreen,text=Message,fg="green",bg="white",height=1,font=("times new roman",40,"bold"))
+        label3.place(relx=0.1,rely=0.3)
+        label8 = Label(DecScreen,text="Decoded Message",fg="white",bg="black",height=1,font=("times new roman",40,"bold"))
+        label8.place(relx=0.1,rely=0.2)
     SelectButton = Button(DecScreen,bd=20,text="PICK A FILE",height=1,width=12,bg="white",font=("times new roman",30,"italic bold"),command=OpenFile)
-    SelectButton.place(relx=0.25,rely=0.4)
+    SelectButton.place(relx=0.25,rely=0.5)
     EncodeButton=Button(DecScreen,bd=20,text="DECODE",height=1,width=10,bg="green",font=("times new roman",30,"italic bold"),command=Decoder)
-    EncodeButton.place(relx=0.6,rely=0.4)
+    EncodeButton.place(relx=0.6,rely=0.5)
     ExitButton1=Button(DecScreen,bd=20,text="EXIT",height=1,width=10,bg="white",font=("times new roman",30,"italic bold"),command=DecScreen.destroy)
     ExitButton1.place(relx=0.8,rely=0.8)
     ImButton=Button(h=5)
